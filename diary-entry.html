@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="Elements\ghost.png">
+    <title>Diary Entry</title>
+    <audio id="horror-music-2" src="Elements/horror-music-3.mp3" loop autoplay></audio>
+
+    <link rel="stylesheet" href="diary-entry-style.css">
+    <link href="https://fonts.cdnfonts.com/css/darling-magenta" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="Elements\ghost.png">
+        <script>
+        const music = document.getElementById("horror-music-3");
+    
+        // Restore music playback time from localStorage
+        window.onload = function () {
+            const savedTime = localStorage.getItem("musicTime");
+            if (savedTime) {
+                music.currentTime = savedTime;
+            }
+            music.play();
+        };
+    </script>
+</head>
+<body>
+    <script src="diary-entry-script.js"></script>
+    <h2>Diary Entries</h2>
+    <div style="text-align: center;">
+        <button class="horror-button" onclick="redirectToLink(1)">Diary Entry 1</button>
+        <button class="horror-button" onclick="redirectToLink(2)">Diary Entry 2</button>
+        <button class="horror-button" onclick="redirectToLink(3)">Diary Entry 3</button>
+        <button class="horror-button" onclick="redirectToLink(4)">Diary Entry 4</button>
+        <button class="horror-button" onclick="redirectToLink(5)">Diary Entry 5</button>
+        <button class="horror-button" onclick="redirectToLink(6)">Diary Entry 6</button>
+    </div>
+</body>
+</html>
+
